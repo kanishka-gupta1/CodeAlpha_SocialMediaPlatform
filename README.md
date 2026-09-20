@@ -1,92 +1,78 @@
-# Aether — Spark Conversations
+# CodeAlpha - Social Media Platform
 
-A premium **glassmorphic mini social media platform** built with Node.js, Express, and vanilla JavaScript. Features a cosmic, frosted-glass UI with real-time interactions.
+A mini social media platform developed as part of the CodeAlpha Full Stack Development Internship.
+
+The application allows users to create accounts, manage profiles, create posts, interact through likes and comments, and follow other users.
+
+## Task
+
+### Task 2: Social Media Platform
+
+The project was developed according to the CodeAlpha Full Stack Development internship task requirements.
+
+### Core Requirements
+
+- User profiles
+- Posts and comments
+- Like and follow system
+- Frontend using HTML, CSS, and JavaScript
+- Backend using Node.js and Express.js
+- Data storage for users, posts, comments, and followers
 
 ## Features
 
-- **User Authentication** — Register and login with JWT-based auth (7-day tokens)
-- **Create Posts** — Share thoughts with optional image attachments
-- **Like & Comment** — Engage with posts through likes and threaded comments
-- **Follow System** — Follow/unfollow users to curate your feed
-- **Explore Page** — Discover new people and posts across the network
-- **User Profiles** — View profiles with stats, bio, and post history
-- **Edit Profile** — Update display name, bio, and avatar (DiceBear presets)
-- **Glassmorphic UI** — Modern frosted-glass design with animated glow orbs
-- **JSON Storage** — Lightweight file-based database (no external DB required)
-- **SPA Architecture** — Seamless client-side navigation
+- User Registration and Login
+- JWT-based Authentication
+- User Profiles
+- Create Posts
+- Optional Image Attachments
+- Like and Unlike Posts
+- Comments on Posts
+- Follow and Unfollow Users
+- Explore Users and Posts
+- User Suggestions
+- Edit Profile
+- Profile Statistics
+- Single Page Application (SPA) interface
 
-## Tech Stack
+## Technologies Used
 
-| Layer    | Technology |
-|----------|-----------|
-| Backend  | Node.js, Express |
-| Frontend | Vanilla JS, CSS3 (Glassmorphism) |
-| Auth     | JSON Web Tokens (jsonwebtoken) |
-| Storage  | JSON file (server/db.js) |
-| Font     | Outfit (Google Fonts) |
-| Avatars  | DiceBear API |
+### Frontend
+- HTML5
+- CSS3
+- Vanilla JavaScript
 
-## Getting Started
+### Backend
+- Node.js
+- Express.js
 
-### Prerequisites
+### Authentication
+- JSON Web Tokens (JWT)
 
-- Node.js v14+
-- npm
-
-### Installation
-
-```bash
-npm install
-```
-
-### Run the Server
-
-```bash
-npm start
-```
-
+### Data Storage
+- JSON file-based storage
 
 ## Project Structure
 
-```
-├── server.js              # Entry point — Express server
-├── package.json
-├── database.json          # JSON file database
+```text
+CodeAlpha_SocialMediaPlatform/
+│
 ├── public/
-│   ├── index.html         # SPA entry point
+│   ├── index.html
 │   ├── css/
-│   │   └── style.css      # Glassmorphic styles
+│   │   └── style.css
 │   └── js/
-│       └── app.js         # Client-side logic
+│       └── app.js
+│
 ├── server/
-│   ├── auth.js            # Auth routes & JWT middleware
-│   ├── db.js              # JSON database operations
-│   ├── posts.js           # Post CRUD & comments
-│   └── users.js           # User profiles & follow system
-└── .gitignore
-```
-
-## API Endpoints
-
-### Auth
-- `POST /api/auth/register` — Register a new user
-- `POST /api/auth/login` — Login
-- `GET /api/auth/me` — Get current user (auth required)
-
-### Posts
-- `GET /api/posts` — Get feed (auth required)
-- `POST /api/posts` — Create a post (auth required)
-- `POST /api/posts/:id/like` — Toggle like (auth required)
-- `GET /api/posts/:id/comments` — Get comments (auth required)
-- `POST /api/posts/:id/comments` — Add comment (auth required)
-
-### Users
-- `GET /api/users/suggestions` — Who to follow (auth required)
-- `GET /api/users/discover` — All users (auth required)
-- `GET /api/users/:username` — User profile (auth required)
-- `PUT /api/users/profile` — Update profile (auth required)
-- `POST /api/users/:username/follow` — Toggle follow (auth required)
-
-## License
-
-ISC
+│   ├── auth.js
+│   ├── db.js
+│   ├── posts.js
+│   └── users.js
+│
+├── database.json
+├── server.js
+├── package.json
+├── package-lock.json
+├── .gitignore
+└── README.md
